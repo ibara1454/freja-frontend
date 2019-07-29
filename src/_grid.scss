@@ -1,0 +1,30 @@
+$config: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+%full-grid {
+    grid-column: span 12;
+}
+
+@each $infix, $size in $config {
+    @for $i from 1 through 12 {
+        .col-#{$infix}-#{$i} {
+            @extend %full-grid;
+        }
+    }
+    @media (min-width: $size) {
+        @for $i from 1 through 12 {
+            .col-#{$infix}-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+}

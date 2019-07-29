@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i|Open+Sans:400,400i,600,600i,700,700i&display=swap");
+$sans-serif: 'Open Sans', Montserrat, sans-serif;
+
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Overpass+Mono|Roboto+Mono&display=swap");
+$monospace: Inconsolata, 'Overpass Mono', 'Roboto Mono', monospace;
+
+code {
+    color: #be2834;
+    font-size: 0.85rem;
+}
+
+code, pre {
+    font-family: Consolas, "Courier New", Courier, Monaco,
+        monospace, "ＭＳ ゴシック", "MS Gothic", "Osaka−等幅";
+}

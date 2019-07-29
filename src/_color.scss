@@ -1,0 +1,452 @@
+// Material colors definition
+// All colors are got from https://www.materialui.co/colors
+
+$md-colors: 'red', 'pink', 'purple', 'deep-purple', 'indigo',
+  'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green',
+  'lime', 'yellow', 'amber', 'orange', 'deep-orange',
+  'brown', 'grey', 'blue-grey';
+
+$md-color-levels: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+$md-red-50:  rgb(255,235,238);
+$md-red-100: rgb(255,205,210);
+$md-red-200: rgb(239,154,154);
+$md-red-300: rgb(229,115,115);
+$md-red-400: rgb(239, 83, 80);
+$md-red-500: rgb(244, 67, 54);
+$md-red-600: rgb(229, 57, 53);
+$md-red-700: rgb(211, 47, 47);
+$md-red-800: rgb(198, 40, 40);
+$md-red-900: rgb(183, 28, 28);
+
+$md-pink-50:  rgb(252,228,236);
+$md-pink-100: rgb(248,187,208);
+$md-pink-200: rgb(244,143,177);
+$md-pink-300: rgb(240, 98,146);
+$md-pink-400: rgb(236, 64,122);
+$md-pink-500: rgb(233, 30, 99);
+$md-pink-600: rgb(216, 27, 96);
+$md-pink-700: rgb(194, 24, 91);
+$md-pink-800: rgb(173, 20, 87);
+$md-pink-900: rgb(136, 14, 79);
+
+$md-purple-50:  rgb(243,229,245);
+$md-purple-100: rgb(225,190,231);
+$md-purple-200: rgb(206,147,216);
+$md-purple-300: rgb(186,104,200);
+$md-purple-400: rgb(171, 71,188);
+$md-purple-500: rgb(156, 39,176);
+$md-purple-600: rgb(142, 36,170);
+$md-purple-700: rgb(123, 31,162);
+$md-purple-800: rgb(106, 27,154);
+$md-purple-900: rgb( 74, 20,140);
+
+$md-deep-purple-50:  rgb(237,231,246);
+$md-deep-purple-100: rgb(209,196,233);
+$md-deep-purple-200: rgb(179,157,219);
+$md-deep-purple-300: rgb(149,117,205);
+$md-deep-purple-400: rgb(126, 87,194);
+$md-deep-purple-500: rgb(103, 58,183);
+$md-deep-purple-600: rgb( 94, 53,177);
+$md-deep-purple-700: rgb( 81, 45,168);
+$md-deep-purple-800: rgb( 69, 39,160);
+$md-deep-purple-900: rgb( 49, 27,146);
+
+$md-indigo-50:  rgb(232,234,246);
+$md-indigo-100: rgb(197,202,233);
+$md-indigo-200: rgb(159,168,218);
+$md-indigo-300: rgb(121,134,203);
+$md-indigo-400: rgb( 92,107,192);
+$md-indigo-500: rgb( 63, 81,181);
+$md-indigo-600: rgb( 57, 73,171);
+$md-indigo-700: rgb( 48, 63,159);
+$md-indigo-800: rgb( 40, 53,147);
+$md-indigo-900: rgb( 26, 35,126);
+
+$md-blue-50:  rgb(227,242,253);
+$md-blue-100: rgb(187,222,251);
+$md-blue-200: rgb(144,202,249);
+$md-blue-300: rgb(100,181,246);
+$md-blue-400: rgb( 66,165,245);
+$md-blue-500: rgb( 33,150,243);
+$md-blue-600: rgb( 30,136,229);
+$md-blue-700: rgb( 25,118,210);
+$md-blue-800: rgb( 21,101,192);
+$md-blue-900: rgb( 13, 71,161);
+
+$md-light-blue-50:  rgb(225,245,254);
+$md-light-blue-100: rgb(179,229,252);
+$md-light-blue-200: rgb(129,212,250);
+$md-light-blue-300: rgb( 79,195,247);
+$md-light-blue-400: rgb( 41,182,246);
+$md-light-blue-500: rgb(  3,169,244);
+$md-light-blue-600: rgb(  3,155,229);
+$md-light-blue-700: rgb(  2,136,209);
+$md-light-blue-800: rgb(  2,119,189);
+$md-light-blue-900: rgb(  1, 87,155);
+
+$md-cyan-50:  rgb(224,247,250);
+$md-cyan-100: rgb(178,235,242);
+$md-cyan-200: rgb(128,222,234);
+$md-cyan-300: rgb( 77,208,225);
+$md-cyan-400: rgb( 38,198,218);
+$md-cyan-500: rgb(  0,188,212);
+$md-cyan-600: rgb(  0,172,193);
+$md-cyan-700: rgb(  0,151,167);
+$md-cyan-800: rgb(  0,131,143);
+$md-cyan-900: rgb(  0, 96,100);
+
+$md-teal-50:  rgb(224,242,241);
+$md-teal-100: rgb(178,223,219);
+$md-teal-200: rgb(128,203,196);
+$md-teal-300: rgb( 77,182,172);
+$md-teal-400: rgb( 38,166,154);
+$md-teal-500: rgb(  0,150,136);
+$md-teal-600: rgb(  0,137,123);
+$md-teal-700: rgb(  0,121,107);
+$md-teal-800: rgb(  0,105, 92);
+$md-teal-900: rgb(  0, 77, 64);
+
+$md-green-50:  rgb(232,245,233);
+$md-green-100: rgb(200,230,201);
+$md-green-200: rgb(165,214,167);
+$md-green-300: rgb(129,199,132);
+$md-green-400: rgb(102,187,106);
+$md-green-500: rgb( 76,175, 80);
+$md-green-600: rgb( 67,160, 71);
+$md-green-700: rgb( 56,142, 60);
+$md-green-800: rgb( 46,125, 50);
+$md-green-900: rgb( 27, 94, 32);
+
+$md-light-green-50:  rgb(241,248,233);
+$md-light-green-100: rgb(220,237,200);
+$md-light-green-200: rgb(197,225,165);
+$md-light-green-300: rgb(174,213,129);
+$md-light-green-400: rgb(156,204,101);
+$md-light-green-500: rgb(139,195, 74);
+$md-light-green-600: rgb(124,179, 66);
+$md-light-green-700: rgb(104,159, 56);
+$md-light-green-800: rgb( 85,139, 47);
+$md-light-green-900: rgb( 51,105, 30);
+
+$md-lime-50:  rgb(249,251,231);
+$md-lime-100: rgb(240,244,195);
+$md-lime-200: rgb(230,238,156);
+$md-lime-300: rgb(220,231,117);
+$md-lime-400: rgb(212,225, 87);
+$md-lime-500: rgb(205,220, 57);
+$md-lime-600: rgb(192,202, 51);
+$md-lime-700: rgb(175,180, 43);
+$md-lime-800: rgb(158,157, 36);
+$md-lime-900: rgb(130,119, 23);
+
+$md-yellow-50:  rgb(255,253,231);
+$md-yellow-100: rgb(255,249,196);
+$md-yellow-200: rgb(255,245,157);
+$md-yellow-300: rgb(255,241,118);
+$md-yellow-400: rgb(255,238, 88);
+$md-yellow-500: rgb(255,235, 59);
+$md-yellow-600: rgb(253,216, 53);
+$md-yellow-700: rgb(251,192, 45);
+$md-yellow-800: rgb(249,168, 37);
+$md-yellow-900: rgb(245,127, 23);
+
+$md-amber-50:  rgb(255,248,225);
+$md-amber-100: rgb(255,236,179);
+$md-amber-200: rgb(255,224,130);
+$md-amber-300: rgb(255,213, 79);
+$md-amber-400: rgb(255,202, 40);
+$md-amber-500: rgb(255,193,  7);
+$md-amber-600: rgb(255,179,  0);
+$md-amber-700: rgb(255,160,  0);
+$md-amber-800: rgb(255,143,  0);
+$md-amber-900: rgb(255,111,  0);
+
+$md-orange-50: rgb(255,243,224);
+$md-orange-100:rgb(255,224,178);
+$md-orange-200:rgb(255,204,128);
+$md-orange-300:rgb(255,183, 77);
+$md-orange-400:rgb(255,167, 38);
+$md-orange-500:rgb(255,152,  0);
+$md-orange-600:rgb(251,140,  0);
+$md-orange-700:rgb(245,124,  0);
+$md-orange-800:rgb(239,108,  0);
+$md-orange-900:rgb(230, 81,  0);
+
+$md-deep-orange-50:  rgb(251,233,231);
+$md-deep-orange-100: rgb(255,204,188);
+$md-deep-orange-200: rgb(255,171,145);
+$md-deep-orange-300: rgb(255,138,101);
+$md-deep-orange-400: rgb(255,112, 67);
+$md-deep-orange-500: rgb(255, 87, 34);
+$md-deep-orange-600: rgb(244, 81, 30);
+$md-deep-orange-700: rgb(230, 74, 25);
+$md-deep-orange-800: rgb(216, 67, 21);
+$md-deep-orange-900: rgb(191, 54, 12);
+
+$md-brown-50:  rgb(239,235,233);
+$md-brown-100: rgb(215,204,200);
+$md-brown-200: rgb(188,170,164);
+$md-brown-300: rgb(161,136,127);
+$md-brown-400: rgb(141,110, 99);
+$md-brown-500: rgb(121, 85, 72);
+$md-brown-600: rgb(109, 76, 65);
+$md-brown-700: rgb( 93, 64, 55);
+$md-brown-800: rgb( 78, 52, 46);
+$md-brown-900: rgb( 62, 39, 35);
+
+$md-grey-50:  rgb(250,250,250);
+$md-grey-100: rgb(245,245,245);
+$md-grey-200: rgb(238,238,238);
+$md-grey-300: rgb(224,224,224);
+$md-grey-400: rgb(189,189,189);
+$md-grey-500: rgb(158,158,158);
+$md-grey-600: rgb(117,117,117);
+$md-grey-700: rgb( 97, 97, 97);
+$md-grey-800: rgb( 66, 66, 66);
+$md-grey-900: rgb( 33, 33, 33);
+
+$md-blue-grey-50:  rgb(236,239,241);
+$md-blue-grey-100: rgb(207,216,220);
+$md-blue-grey-200: rgb(176,190,197);
+$md-blue-grey-300: rgb(144,164,174);
+$md-blue-grey-400: rgb(120,144,156);
+$md-blue-grey-500: rgb( 96,125,139);
+$md-blue-grey-600: rgb( 84,110,122);
+$md-blue-grey-700: rgb( 69, 90,100);
+$md-blue-grey-800: rgb( 55, 71, 79);
+$md-blue-grey-900: rgb( 38, 50, 56);
+
+$md-color-map: (
+  'red': (
+    50: $md-red-50,
+    100: $md-red-100,
+    200: $md-red-200,
+    300: $md-red-300,
+    400: $md-red-400,
+    500: $md-red-500,
+    600: $md-red-600,
+    700: $md-red-700,
+    800: $md-red-800,
+    900: $md-red-900,
+  ),
+  'pink': (
+    50: $md-pink-50,
+    100: $md-pink-100,
+    200: $md-pink-200,
+    300: $md-pink-300,
+    400: $md-pink-400,
+    500: $md-pink-500,
+    600: $md-pink-600,
+    700: $md-pink-700,
+    800: $md-pink-800,
+    900: $md-pink-900,
+  ),
+  'purple': (
+    50: $md-purple-50,
+    100: $md-purple-100,
+    200: $md-purple-200,
+    300: $md-purple-300,
+    400: $md-purple-400,
+    500: $md-purple-500,
+    600: $md-purple-600,
+    700: $md-purple-700,
+    800: $md-purple-800,
+    900: $md-purple-900,
+  ),
+  'deep-purple': (
+    50: $md-deep-purple-50,
+    100: $md-deep-purple-100,
+    200: $md-deep-purple-200,
+    300: $md-deep-purple-300,
+    400: $md-deep-purple-400,
+    500: $md-deep-purple-500,
+    600: $md-deep-purple-600,
+    700: $md-deep-purple-700,
+    800: $md-deep-purple-800,
+    900: $md-deep-purple-900,
+  ),
+  'indigo': (
+    50: $md-indigo-50,
+    100: $md-indigo-100,
+    200: $md-indigo-200,
+    300: $md-indigo-300,
+    400: $md-indigo-400,
+    500: $md-indigo-500,
+    600: $md-indigo-600,
+    700: $md-indigo-700,
+    800: $md-indigo-800,
+    900: $md-indigo-900,
+  ),
+  'blue': (
+    50: $md-blue-50,
+    100: $md-blue-100,
+    200: $md-blue-200,
+    300: $md-blue-300,
+    400: $md-blue-400,
+    500: $md-blue-500,
+    600: $md-blue-600,
+    700: $md-blue-700,
+    800: $md-blue-800,
+    900: $md-blue-900,
+  ),
+  'light-blue': (
+    50: $md-light-blue-50,
+    100: $md-light-blue-100,
+    200: $md-light-blue-200,
+    300: $md-light-blue-300,
+    400: $md-light-blue-400,
+    500: $md-light-blue-500,
+    600: $md-light-blue-600,
+    700: $md-light-blue-700,
+    800: $md-light-blue-800,
+    900: $md-light-blue-900,
+  ),
+  'cyan': (
+    50: $md-cyan-50,
+    100: $md-cyan-100,
+    200: $md-cyan-200,
+    300: $md-cyan-300,
+    400: $md-cyan-400,
+    500: $md-cyan-500,
+    600: $md-cyan-600,
+    700: $md-cyan-700,
+    800: $md-cyan-800,
+    900: $md-cyan-900,
+  ),
+  'teal': (
+    50: $md-teal-50,
+    100: $md-teal-100,
+    200: $md-teal-200,
+    300: $md-teal-300,
+    400: $md-teal-400,
+    500: $md-teal-500,
+    600: $md-teal-600,
+    700: $md-teal-700,
+    800: $md-teal-800,
+    900: $md-teal-900,
+  ),
+  'green': (
+    50: $md-green-50,
+    100: $md-green-100,
+    200: $md-green-200,
+    300: $md-green-300,
+    400: $md-green-400,
+    500: $md-green-500,
+    600: $md-green-600,
+    700: $md-green-700,
+    800: $md-green-800,
+    900: $md-green-900,
+  ),
+  'light-green': (
+    50: $md-light-green-50,
+    100: $md-light-green-100,
+    200: $md-light-green-200,
+    300: $md-light-green-300,
+    400: $md-light-green-400,
+    500: $md-light-green-500,
+    600: $md-light-green-600,
+    700: $md-light-green-700,
+    800: $md-light-green-800,
+    900: $md-light-green-900,
+  ),
+  'lime': (
+    50: $md-lime-50,
+    100: $md-lime-100,
+    200: $md-lime-200,
+    300: $md-lime-300,
+    400: $md-lime-400,
+    500: $md-lime-500,
+    600: $md-lime-600,
+    700: $md-lime-700,
+    800: $md-lime-800,
+    900: $md-lime-900,
+  ),
+  'yellow': (
+    50: $md-yellow-50,
+    100: $md-yellow-100,
+    200: $md-yellow-200,
+    300: $md-yellow-300,
+    400: $md-yellow-400,
+    500: $md-yellow-500,
+    600: $md-yellow-600,
+    700: $md-yellow-700,
+    800: $md-yellow-800,
+    900: $md-yellow-900,
+  ),
+  'amber': (
+    50: $md-amber-50,
+    100: $md-amber-100,
+    200: $md-amber-200,
+    300: $md-amber-300,
+    400: $md-amber-400,
+    500: $md-amber-500,
+    600: $md-amber-600,
+    700: $md-amber-700,
+    800: $md-amber-800,
+    900: $md-amber-900,
+  ),
+  'orange': (
+    50: $md-orange-50,
+    100: $md-orange-100,
+    200: $md-orange-200,
+    300: $md-orange-300,
+    400: $md-orange-400,
+    500: $md-orange-500,
+    600: $md-orange-600,
+    700: $md-orange-700,
+    800: $md-orange-800,
+    900: $md-orange-900,
+  ),
+  'deep-orange': (
+    50: $md-deep-orange-50,
+    100: $md-deep-orange-100,
+    200: $md-deep-orange-200,
+    300: $md-deep-orange-300,
+    400: $md-deep-orange-400,
+    500: $md-deep-orange-500,
+    600: $md-deep-orange-600,
+    700: $md-deep-orange-700,
+    800: $md-deep-orange-800,
+    900: $md-deep-orange-900,
+  ),
+  'brown': (
+    50: $md-brown-50,
+    100: $md-brown-100,
+    200: $md-brown-200,
+    300: $md-brown-300,
+    400: $md-brown-400,
+    500: $md-brown-500,
+    600: $md-brown-600,
+    700: $md-brown-700,
+    800: $md-brown-800,
+    900: $md-brown-900,
+  ),
+  'grey': (
+    50: $md-grey-50,
+    100: $md-grey-100,
+    200: $md-grey-200,
+    300: $md-grey-300,
+    400: $md-grey-400,
+    500: $md-grey-500,
+    600: $md-grey-600,
+    700: $md-grey-700,
+    800: $md-grey-800,
+    900: $md-grey-900,
+  ),
+  'blue-grey': (
+    50: $md-blue-grey-50,
+    100: $md-blue-grey-100,
+    200: $md-blue-grey-200,
+    300: $md-blue-grey-300,
+    400: $md-blue-grey-400,
+    500: $md-blue-grey-500,
+    600: $md-blue-grey-600,
+    700: $md-blue-grey-700,
+    800: $md-blue-grey-800,
+    900: $md-blue-grey-900,
+  ),
+);
+
+$primary-color: $md-blue-500;
+$secondary-color: $md-blue-300;
