@@ -9,7 +9,11 @@ class Rule {
    * @param {Detail?} response
    */
   constructor(matcher, request, response) {
-    this.id = uuidv4();
+    // Define implicit `id` property
+    Object.defineProperty(this, 'id', {
+      value: uuidv4(),
+      enumerable: false,
+    });
     this.matcher = matcher;
     this.request = request || new Detail();
     this.response = response || new Detail();
