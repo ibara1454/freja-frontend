@@ -1,23 +1,25 @@
-import Override from '@/models/detail';
+import Detail from '@/models/detail';
+import uuidv4 from 'uuid/v4';
 
 class Rule {
   /**
    *
    * @param {RegExp} matcher
-   * @param {Override?} request
-   * @param {Override?} response
+   * @param {Detail?} request
+   * @param {Detail?} response
    */
   constructor(matcher, request, response) {
+    this.id = uuidv4();
     this.matcher = matcher;
-    this.request = request || new Override();
-    this.response = response || new Override();
+    this.request = request || new Detail();
+    this.response = response || new Detail();
   }
 
   static parse(object) {
     return new Rule(
       object.matcher,
-      Override.parse(object.request),
-      Override.parse(object.response)
+      Detail.parse(object.request),
+      Detail.parse(object.response)
     );
   }
 }

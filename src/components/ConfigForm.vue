@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="submit">
     <transition-group name="list" tag="ul" class="container">
-      <li v-for="(rule, index) in rules" :key="index" class="item">
+      <li v-for="(rule, index) in rules" :key="rule.id" class="item">
         <p class="title">#Rule {{ index + 1 }}</p>
         <rule :rule.sync="rule" @remove="remove(index)"/>
       </li>

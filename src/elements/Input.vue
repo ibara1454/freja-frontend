@@ -27,7 +27,6 @@ export default {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  outline: 0;
   transition-property: border;
   transition-duration: 0.2s;
   &::placeholder {

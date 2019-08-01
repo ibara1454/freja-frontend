@@ -12,12 +12,11 @@
     <div class="row grid-container">
       <div class="column col-xl-6 request">
         <label class="left align-items-center">
-          <span>Request</span>
           <font-awesome-layers class="fa-stack fa-lg icon">
             <font-awesome-icon class="background" icon="circle" size="2x" />
             <font-awesome-icon :icon="['fas', 'plane']" style="color: white;" />
           </font-awesome-layers>
-
+          <span>Request</span>
         </label>
         <div class="layer-1 left">
           <div class="delay">
@@ -35,11 +34,11 @@
       </div>
       <div class="column col-xl-6 response">
         <label class="left align-items-center">
-          <span>Response</span>
           <font-awesome-layers class="fa-stack fa-lg icon">
             <font-awesome-icon class="background" icon="circle" size="2x" />
             <font-awesome-icon :icon="['fas', 'plane']" style="color: white;" rotation="180" />
           </font-awesome-layers>
+          <span>Response</span>
         </label>
         <div class="layer-1 left">
           <div class="delay">
@@ -198,7 +197,7 @@ export default {
 }
 
 .layer-1 {
-  padding-left: 3.75rem;
+  padding-left: 1.5rem;
 }
 
 .left {
