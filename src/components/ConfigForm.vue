@@ -1,11 +1,16 @@
 <template>
   <form @submit.prevent="submit">
-    <transition-group name="list" tag="ul" class="container">
-      <li v-for="(rule, index) in rules" :key="rule.id" class="item">
-        <p class="title">#Rule {{ index + 1 }}</p>
-        <rule :rule.sync="rule" @remove="remove(index)"/>
-      </li>
-    </transition-group>
+    <draggable
+      :value="rules"
+      @input="sorted"
+      v-bind="dragOptions">
+      <transition-group name="list" tag="ul" class="container">
+        <li v-for="(rule, index) in rules" :key="rule.id" class="item">
+          <p class="title">#Rule {{ index + 1 }}</p>
+          <rule :rule.sync="rule" @remove="remove(index)"/>
+        </li>
+      </transition-group>
+    </draggable>
     <el-card class="add" @click.native="append">
       <font-awesome-layers class="fa-stack fa-lg">
         <font-awesome-icon :icon="['far', 'circle']" size="2x" />
@@ -19,13 +24,24 @@
 </template>
 
 <script>
+import Draggable from 'vuedraggable';
 import Rule from '@/components/Rule.vue';
 
 export default {
   name: 'ConfigForm',
-  components: { Rule },
+  components: { Draggable, Rule },
   props: {
     rules: { type: Array, required: true },
+  },
+  computed: {
+    dragOptions() {
+      return {
+        animation: 200,
+        group: "description",
+        disabled: false,
+        ghostClass: "ghost"
+      };
+    }
   },
   methods: {
     remove(index) {
@@ -37,6 +53,9 @@ export default {
     submit() {
       // Transform native submit event into user-define submit event
       this.$emit('submit');
+    },
+    sorted(list) {
+      this.$emit('sorted', list);
     },
   },
 };

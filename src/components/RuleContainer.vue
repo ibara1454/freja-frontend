@@ -1,5 +1,5 @@
 <template>
-  <config-form :rules="rules" @remove="onRemove" @append="onAppend" @submit="onSubmit" />
+  <config-form :rules="rules" @remove="onRemove" @append="onAppend" @submit="onSubmit" @sorted="onSorted"/>
 </template>
 
 <script>
@@ -30,6 +30,9 @@ export default {
     onSubmit() {
       // Send configuration to backend API server
       axios.post(`${endpoint}/settings`, this.rules);
+    },
+    onSorted(rules) {
+      this.rules = rules;
     },
   },
   async mounted() {
