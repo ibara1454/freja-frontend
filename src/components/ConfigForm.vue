@@ -5,16 +5,13 @@
         <p class="title">#Rule {{ index + 1 }}</p>
         <rule :rule.sync="rule" @remove="remove(index)"/>
       </li>
-      <li :key="'add'">
-        <el-card class="add" @click.native="append" >
-          <font-awesome-layers class="fa-stack fa-lg">
-            <font-awesome-icon :icon="['far', 'circle']" size="2x" />
-            <font-awesome-icon :icon="['fas', 'plus']" />
-          </font-awesome-layers>
-        </el-card>
-      </li>
     </transition-group>
-
+    <el-card class="add" @click.native="append">
+      <font-awesome-layers class="fa-stack fa-lg">
+        <font-awesome-icon :icon="['far', 'circle']" size="2x" />
+        <font-awesome-icon :icon="['fas', 'plus']" />
+      </font-awesome-layers>
+    </el-card>
     <el-flat-button class="blue" :disabled="errors.items.length !== 0" type="submit">
       Submit
     </el-flat-button>
@@ -57,6 +54,7 @@ form {
 .container {
   display: grid;
   gap: 20px;
+  overflow: hidden;
 }
 
 .title {
@@ -92,9 +90,10 @@ li {
 }
 
 .list-enter-active, .list-leave-active {
-  transition: all .5s ease;
+  transition: all .3s ease-out;
+  max-height: 500px;
 }
 .list-enter, .list-leave-to /* .list-leave-active for below version 2.1.8 */ {
-  opacity: 0;
+  max-height: 0;
 }
 </style>
