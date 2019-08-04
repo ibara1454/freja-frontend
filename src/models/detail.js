@@ -6,13 +6,13 @@ class Detail {
    */
   constructor(delay, detail) {
     this.delay = delay || 0;
-    this.detail = detail || '';
+    this.detail = detail || "{}";
   }
 
   static parse(object) {
     return new Detail(
-      object.delay || null,
-      object.detail && JSON.stringify(object.detail, null, '    '),
+      object.delay,
+      JSON.stringify(object.detail, null, '    '),
     );
   }
 }

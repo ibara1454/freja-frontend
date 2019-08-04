@@ -5,9 +5,9 @@
     </button>
     <div class="row matcher">
       <label>Match</label>
-      <el-input placeholder="^(http|https).*\.example\.com$" v-model="dataRule.matcher" name="matcher" v-validate="'regex-exp'" />
+      <el-input placeholder="^(http|https).*\.example\.com$" v-model="dataRule.matcher" name="matcher" v-validate="'regex-exp|required'" />
     </div>
-    <p class="error left" v-if="errors.has('matcher')">{{ errors.first('matcher') }}</p>
+    <p class="error left" v-if="errors.has('matcher')">The field may only be a valid Regex expression.</p>
     <el-horizontal-divider class="divider row" />
     <div class="row grid-container">
       <div class="column col-xl-6 request">
@@ -27,7 +27,7 @@
           </div>
           <div class="detail">
             <label class="left newline">Detail</label>
-            <el-textarea class="full-width" v-model="dataRule.request.detail" name="request-detail" v-validate="'json'" :placeholder="JSON.stringify({requestOptions: { header: { 'Content-Type': 'application/json' } }, requestData: '...'})" />
+            <el-textarea class="full-width" v-model="dataRule.request.detail" name="request-detail" v-validate="'json|required'" :placeholder="JSON.stringify({requestOptions: { header: { 'Content-Type': 'application/json' } }, requestData: '...'})" />
             <p class="error left" v-if="errors.has('request-detail')">{{ errors.first('request-detail') }}</p>
           </div>
         </div>
@@ -49,7 +49,7 @@
           </div>
           <div class="detail">
             <label class="left newline">Detail</label>
-            <el-textarea class="full-width" v-model="dataRule.response.detail" name="response-detail" v-validate="'json'" :placeholder="JSON.stringify({statusCode: 200, header: {}, body: 'ok'})" />
+            <el-textarea class="full-width" v-model="dataRule.response.detail" name="response-detail" v-validate="'json|required'" :placeholder="JSON.stringify({statusCode: 200, header: {}, body: 'ok'})" />
             <p class="error left" v-if="errors.has('response-detail')">{{ errors.first('response-detail') }}</p>
           </div>
         </div>
@@ -97,16 +97,12 @@ export default {
     rule: {
       type: Object,
       required: true,
-    }
+    },
   },
   methods: {
     remove() {
       this.$emit('remove');
     },
-    async onInput() {
-      const result = await this.$validator.validateAll();
-      console.log(result);
-    }
   },
   watch: {
     dataRule: {

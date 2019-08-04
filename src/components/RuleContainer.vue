@@ -21,15 +21,28 @@ export default {
   methods: {
     onAppend() {
       // Initialize new rule with empty matcher
-      const matcher = '';
+      const matcher = '^(http|https).*example';
       this.rules.push(new Rule(matcher));
     },
     onRemove(index) {
       this.rules = this.rules.filter((_, i) => i != index);
     },
     onSubmit() {
+      const rules = this.rules.map(rule => {
+        return {
+          matcher: rule.matcher,
+          request: {
+            delay: rule.request.delay,
+            detail: JSON.parse(rule.request.detail),
+          },
+          response: {
+            delay: rule.response.delay,
+            detail: JSON.parse(rule.response.detail),
+          },
+        };
+      });
       // Send configuration to backend API server
-      axios.post(`${endpoint}/settings`, this.rules);
+      axios.post(`${endpoint}/settings`, rules);
     },
     onSorted(rules) {
       this.rules = rules;

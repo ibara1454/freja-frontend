@@ -6,7 +6,7 @@
     </p>
     <h3>Informations</h3>
     <ul>
-      <li><a href="https://dummy" target="_blank" rel="noopener">Monitor</a></li>
+      <li><a href="https://dummy" class="disabled" target="_blank" rel="noopener">Monitor</a></li>
     </ul>
   </div>
 </template>
@@ -31,5 +31,12 @@ li {
 }
 a {
   color: #42b983;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: grey;
+  text-decoration: none;
 }
 </style>
